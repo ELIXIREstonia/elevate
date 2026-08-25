@@ -137,7 +137,8 @@ news_html = "".join(
  for pend,tag,date,title,txt in NEWS)
 
 # ------------------------------------------------------------------ page
-html = f"""<title>ELEVATE DM</title>
+html = f"""<meta charset="utf-8">
+<title>ELEVATE DM</title>
 <style>
 :root {{
   --paper:#FFFFFF; --surface:#F9F3ED; --band:#00295E; --band-ink:#F9F3ED;
@@ -494,5 +495,5 @@ footer ul a:hover{{opacity:1;text-decoration:underline}}
 </script>
 """
 
-(P / "index-alt.html").write_text(html)
+(P / "index-alt.html").write_text(html, encoding="utf-8")
 print("index-alt.html written:", len(html), "bytes")
